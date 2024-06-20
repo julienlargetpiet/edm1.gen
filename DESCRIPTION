@@ -1,0 +1,15 @@
+Package: edm1
+Title: Set of tools to generate data
+Version: 2.0.0.0
+Authors@R: 
+    person("Julien", "Larget-Piet", , "julien.larget-piet@dreamRs.fr", role = c("aut", "cre"))
+Description: Provides functions to generate data according to tatistical laws or special algorytms, like a column name generator or a random data generator according to different statistical laws.
+License: GPL (==3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+    stringr,
+    stringi,
+    dplyr,
+    openxlsx
