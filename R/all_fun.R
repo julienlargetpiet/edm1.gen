@@ -383,4 +383,36 @@ infinite_char_seq <- function(n, base_char = letters){
   return(Rtnl)
 }
 
+#' selected_char 
+#'
+#' Allow to generate a char based on a conbinaison on characters from a vector and a number
+#'
+#' @param n is how many sequence of numbers will be generated
+#' @param base_char is the vector containing the elements from which the character is generated
+#' @examples
+#'
+#' print(selected_char(1222))
+#'
+#' [1] "zta"
+#'
+#' @export
+
+selected_char <- function(n, base_char = letters){
+  rtn_v <- c()
+  cnt = 0
+  while (26 ** cnt <= n){
+    cnt = cnt + 1
+    reste <- n %% (26 ** cnt)
+    if (reste != 0){
+      if (reste >= 26){ reste2 <- reste / (26 ** (cnt - 1)) }else{ reste2 <- reste }
+      rtn_v <- c(rtn_v, base_char[reste2])
+    }else{
+      reste <- 26 ** cnt
+      rtn_v <- c(rtn_v, base_char[26])
+    }
+    n = n - reste
+  }
+  return(paste(rtn_v, collapse = ""))
+}
+
 

@@ -3,3 +3,4 @@
 export(data_gen)
 export(infinite_char_seq)
 export(pattern_generator)
+export(selected_char)

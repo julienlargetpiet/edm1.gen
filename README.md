@@ -13,6 +13,7 @@ R > library("devtools")
 R > build()
 
 R > install()
+
 # `data_gen`
 
 data_gen
@@ -203,6 +204,40 @@ print(pattern_generator(base_="oui", from_=c("er", "re", "ere"), nb=1, hmn=3))
 print(pattern_generator(base_="oui", from_=c("er", "re", "ere"), nb=2, hmn=3, after=0, sep="-"))
 
 # [1] "er-re-o-u-i"  "ere-re-o-u-i" "ere-er-o-u-i"
+```
+
+
+# `selected_char`
+
+selected_char
+
+
+## Description
+
+Allow to generate a char based on a conbinaison on characters from a vector and a number
+
+
+## Usage
+
+```r
+selected_char(n, base_char = letters)
+```
+
+
+## Arguments
+
+Argument      |Description
+------------- |----------------
+`n`     |     is how many sequence of numbers will be generated
+`base_char`     |     is the vector containing the elements from which the character is generated
+
+
+## Examples
+
+```r
+print(selected_char(1222))
+
+[1] "zta"
 ```
 
 
